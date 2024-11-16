@@ -12,6 +12,22 @@
     };
   in {
     devShells."${system}" = {
+      base = pkgs.mkShell {
+      packages = with pkgs; [
+        git
+        nodejs_20
+        pnpm_8
+        # nodePackages.pnpm
+        #(yarn.override { nodejs = nodejs_18; })
+        # Add nvm if needed
+        # nvm
+      ];
+
+      # Environment variables
+        shellHook = ''
+          source ${./shells/base.sh}
+        '';
+    };      
       build = pkgs.mkShell {
       packages = with pkgs; [
         git
