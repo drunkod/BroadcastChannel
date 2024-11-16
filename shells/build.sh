@@ -10,7 +10,7 @@ cp -r ./* app/
 # Run the build command
 export $(cat .env.example)
 
-cd /app
+cd app
 # export DOCKER=true
 pnpm run build
 

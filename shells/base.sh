@@ -6,7 +6,7 @@
 # corepack enable
 
 # Create and navigate to the working directory
-mkdir -p /app
+mkdir -p app
 # cd /app
 
 # Copy package.json and pnpm-lock.yaml (assuming they are in the current directory)
