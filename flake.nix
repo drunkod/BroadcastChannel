@@ -10,13 +10,14 @@
     pkgs = import nixpkgs {
       inherit system;
     };
+    
   in {
     devShells."${system}" = {
       base = pkgs.mkShell {
       packages = with pkgs; [
         git
         nodejs_20
-        pnpm_8
+        pnpm
         # nodePackages.pnpm
         #(yarn.override { nodejs = nodejs_18; })
         # Add nvm if needed
@@ -32,7 +33,7 @@
       packages = with pkgs; [
         git
         nodejs_20
-        pnpm_8
+        pnpm
         # nodePackages.pnpm
         #(yarn.override { nodejs = nodejs_18; })
         # Add nvm if needed
@@ -49,7 +50,7 @@
       packages = with pkgs; [
         git
         nodejs_20
-        pnpm_8
+        pnpm
         # nodePackages.pnpm
         #(yarn.override { nodejs = nodejs_18; })
         # Add nvm if needed
